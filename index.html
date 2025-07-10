@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이지네트웍스 실매출 기반 틈새시장 발굴 및 유입 전략</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/subsets/Paperlogy-dynamic-subset.css" type="text/css"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Paperlogy", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            background-color: #f0f2f5;
+            color: #172b4d;
+            line-height: 1.6;
+            padding: 15px;
+        }
+        
+        .container {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .section {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-section {
+            background: linear-gradient(135deg, #0052cc 0%, #0065ff 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .header-section h1 {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .header-section .subtitle {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        
+        .section h2 {
+            color: #0052cc;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e1e4e8;
+        }
+        
+        .section h3 {
+            color: #172b4d;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+        }
+        
+        .section h4 {
+            color: #0052cc;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 15px 0 8px 0;
+        }
+        
+        .quote-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #0052cc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .quote-box p {
+            margin-bottom: 10px;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        .quote-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .objectives-list {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .objectives-list p {
+            margin-bottom: 8px;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+        
+        li strong {
+            color: #0052cc;
+        }
+        
+        .execution-item {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 4px solid #0052cc;
+        }
+        
+        .execution-item h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            font-size: 0.85em;
+        }
+        
+        th {
+            background-color: #0052cc;
+            color: #ffffff;
+            padding: 12px 8px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        
+        td {
+            padding: 10px 8px;
+            border-bottom: 1px solid #e1e4e8;
+            vertical-align: top;
+            line-height: 1.4;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .divider {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, #0052cc, #e1e4e8);
+            margin: 25px 0;
+        }
+        
+        .highlight-text {
+            color: #0052cc;
+            font-weight: bold;
+        }
+        
+        .example-text {
+            color: #5e6c84;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+        
+                 /* 갤럭시 Z 플립 최적화 (22:9 비율, 344px 기준) */
+         @media (max-width: 360px) and (min-height: 700px) {
+             body {
+                 padding: 8px;
+                 font-size: 14px;
+             }
+             
+             .section {
+                 padding: 18px 16px;
+                 margin-bottom: 12px;
+                 border-radius: 16px;
+             }
+             
+             .header-section {
+                 padding: 24px 16px;
+                 background: linear-gradient(135deg, #0052cc 0%, #0065ff 100%);
+                 margin-bottom: 16px;
+             }
+             
+             .header-section h1 {
+                 font-size: 1.5em;
+                 line-height: 1.2;
+                 margin-bottom: 12px;
+             }
+             
+             .header-section .subtitle {
+                 font-size: 0.85em;
+             }
+             
+             .section h2 {
+                 font-size: 1.3em;
+                 margin-bottom: 12px;
+                 padding-bottom: 6px;
+             }
+             
+             .section h4 {
+                 font-size: 1.05em;
+                 margin: 12px 0 6px 0;
+             }
+             
+                           .quote-box {
+                  padding: 14px;
+                  margin: 12px 0;
+                  border-radius: 12px;
+              }
+              
+              .quote-box p {
+                  font-size: 0.9em;
+                  margin-bottom: 8px;
+                  line-height: 1.5;
+                  word-break: keep-all;
+                  overflow-wrap: break-word;
+              }
+             
+             .objectives-list {
+                 padding: 14px;
+                 margin: 12px 0;
+                 border-radius: 12px;
+             }
+             
+             .objectives-list p {
+                 font-size: 0.9em;
+                 margin-bottom: 6px;
+             }
+             
+             .execution-item {
+                 padding: 14px;
+                 margin-bottom: 12px;
+                 border-radius: 12px;
+                 border-left-width: 3px;
+             }
+             
+             ul {
+                 padding-left: 16px;
+                 margin: 8px 0;
+             }
+             
+             li {
+                 font-size: 0.85em;
+                 margin-bottom: 6px;
+                 line-height: 1.4;
+             }
+             
+             .example-text {
+                 font-size: 0.8em;
+             }
+             
+             .table-container {
+                 margin: 12px 0;
+                 border-radius: 12px;
+                 /* 갤럭시 플립에서 테이블 스크롤 개선 */
+                 overflow-x: auto;
+                 -webkit-overflow-scrolling: touch;
+             }
+             
+             table {
+                 font-size: 0.75em;
+                 min-width: 320px;
+             }
+             
+             th {
+                 padding: 10px 6px;
+                 font-size: 0.85em;
+                 line-height: 1.2;
+             }
+             
+             td {
+                 padding: 8px 6px;
+                 line-height: 1.3;
+                 font-size: 0.8em;
+             }
+             
+             .divider {
+                 margin: 20px 0;
+                 height: 1px;
+             }
+         }
+
+         /* 일반 모바일 (갤럭시 플립 외) */
+         @media (max-width: 480px) and (max-height: 700px) {
+             body {
+                 padding: 10px;
+             }
+             
+             .section {
+                 padding: 15px;
+                 margin-bottom: 15px;
+             }
+             
+             .header-section {
+                 padding: 25px 15px;
+             }
+             
+             .header-section h1 {
+                 font-size: 1.6em;
+             }
+             
+             table {
+                 font-size: 0.8em;
+             }
+             
+             th, td {
+                 padding: 8px 6px;
+             }
+         }
+
+         /* 추가: 매우 좁은 화면 (320px 이하) 대응 */
+         @media (max-width: 320px) {
+             body {
+                 padding: 6px;
+                 font-size: 13px;
+             }
+             
+             .section {
+                 padding: 12px;
+                 margin-bottom: 10px;
+             }
+             
+             .header-section {
+                 padding: 20px 12px;
+             }
+             
+             .header-section h1 {
+                 font-size: 1.4em;
+             }
+             
+             .section h2 {
+                 font-size: 1.2em;
+             }
+             
+             table {
+                 font-size: 0.7em;
+                 min-width: 280px;
+             }
+             
+             th, td {
+                 padding: 6px 4px;
+             }
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 헤더 -->
+        <div class="section header-section">
+            <h1>이지네트웍스 프로젝트 개요(안)</h1>
+        </div>
+
+        <!-- 1. 프로젝트 개요 -->
+        <div class="section">
+            <h2>1. 프로젝트 개요</h2>
+            <div class="quote-box">
+                <p>이지네트웍스 매출 기반 틈새시장 발굴 및 유입 전략 과제</p>
+            </div>
+        </div>
+
+                 <!-- 2. 과제 배경 및 목적 -->
+         <div class="section">
+             <h2>2. 과제 배경 및 목적</h2>
+             <div class="quote-box">
+                 <p>26년간 B2B 렌탈 전문기업으로서 신뢰를 쌓아온 <strong>이지네트웍스</strong>는,</p>
+                 
+                 <p>기존의 입찰, 인맥, 특수계약 등<br>전통적인 영업 방식 외에도</p>
+                 
+                 <p><strong>지속 가능한 성장을 위한<br>새로운 고객 유입 경로 발굴</strong>을<br>추진하고 있습니다.</p>
+                 
+                 <p>이번 과제는 단순한 브랜드 인지도 제고를 넘어,</p>
+                 
+                 <p>'실제 매출로 연결될 수 있는<br>유의미한 시장'에 초점을 맞춰</p>
+                 
+                 <p><strong>현재의 영업 구조를 점검하고,<br>전환 가능한 신규 시장 기회를 모색</strong>하는 데<br>중점을 두고 있습니다.</p>
+                 
+                 <p>이를 통해 이지네트웍스는<br><strong>더 넓은 시장 접점을 확보하고,<br>핵심 역량인 '렌탈'을 기반으로 한<br>확장 전략을 구체화</strong>하고자 합니다.</p>
+             </div>
+         </div>
+
+        <!-- 3. 최종 목적 -->
+        <div class="section">
+            <h2>3. 최종 목적</h2>
+            <div class="objectives-list">
+                <p>B2B/B2G 시장 내 새로운 고객 유입 경로 발굴</p>
+                <p>새롭게 접근 가능한 고객군을 정의하고, 접점 형성 가능성을 데이터 기반으로 검토</p>
+                <p>매출 전환 중심의 마케팅 채널 전략 설계</p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- 1개월간 주요 실행 항목 -->
+        <div class="section">
+            <h2>[ 1개월간 주요 실행 항목 ]</h2>
+
+            <div class="execution-item">
+                <h4>1. 시장 기회 탐색</h4>
+                <ul>
+                    <li><strong>나라장터 공공입찰 키워드 수집 및 필터링</strong>
+                        <ul>
+                            <li class="example-text">예 : '구축', '운영', '행사', '전환', '정보화', '환경개선', '스마트' 등</li>
+                            <li>장비 구매가 포함된 입찰건 → 렌탈 제안 가능성 탐색</li>
+                        </ul>
+                    </li>
+                    <li><strong>Hidden Market 찾아보기</strong>
+                        <ul>
+                            <li>업종별 법정 의무 장비 리스트 조사 (건설, 복지, 교육 등)</li>
+                            <li>관련 정책 기반 렌탈 수용 가능성 파악</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="execution-item">
+                <h4>2. 틈새시장 타깃 시나리오 도출 및 제안서 구성</h4>
+                <ul>
+                    <li><strong>지자체용 활용 예시 정리</strong>
+                        <ul>
+                            <li class="example-text">예 : 공기질 체험관, 복지관 렌탈 등</li>
+                        </ul>
+                    </li>
+                    <li><strong>기업용 응용 예시 시나리오 도출</strong>
+                        <ul>
+                            <li class="example-text">예 : AI POC 키트, ESG 대응용 모니터링 장비 등</li>
+                        </ul>
+                    </li>
+                    <li>각 타깃에 대해 간단한 1P 제안서 포맷 초안 구성</li>
+                </ul>
+            </div>
+
+            <div class="execution-item">
+                <h4>3. 유입 채널 및 전환 실험</h4>
+                <ul>
+                    <li>타깃 직무 기준 이메일 제안서</li>
+                    <li>블로그/네이버 키워드 광고 테스트</li>
+                    <li>견적 요청 유도 구조 설계 (CTA 흐름 테스트)</li>
+                </ul>
+            </div>
+
+            <div class="execution-item">
+                <h4>4. 마케팅</h4>
+                <ul>
+                    <li>숏폼 기반 SNS 콘텐츠 아이디어 정리 (YouTube Shorts / Instagram Reels)</li>
+                    <li>제품 / 상황별 콘텐츠 콘셉트 기획
+                        <div class="example-text">→ 스토리 보드 초안 수준</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="execution-item">
+                <h4>5. 전시 채널 활용 및 특수 타깃 영업</h4>
+                <ul>
+                    <li>현재 참가 중 전시·박람회 리스트 점검</li>
+                    <li>적합한 업계 전시회 목록 리스트 검토</li>
+                    <li>현장 방문 or 타깃 업체 리스트 선정</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- 내부 목표 상세 -->
+        <div class="section">
+            <h2>[ 내부 목표 상세 ]</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>단계</th>
+                            <th>주요 목표</th>
+                            <th>할 일 요약</th>
+                            <th>공유 항목</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1</strong></td>
+                            <td>시장 기회 찾기</td>
+                            <td>
+                                - 나라장터 키워드 수집 & 필터링<br>
+                                - 렌탈 가능성 있는 입찰 선별<br>
+                                - 업종별 법정 장비 조사<br>
+                                - Hidden 시장 아이디어 정리<br>
+                                - 미팅 자료 준비
+                            </td>
+                            <td>
+                                - 키워드맵<br>
+                                - 장비/정책 정리<br>
+                                - 아이디어 메모
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>2</strong></td>
+                            <td>타깃 정리<br>+ 제안서 초안 만들기</td>
+                            <td>
+                                - 지자체/기업 타깃 시나리오 작성 (2개씩)<br>
+                                - 제안서 템플릿 구성<br>
+                                - 제품 구성표 초안<br>
+                                - 미팅 자료 준비
+                            </td>
+                            <td>
+                                - 제안서 시안 PDF<br>
+                                - 타깃별 아이디어 정리<br>
+                                - 구성표 초안
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>3</strong></td>
+                            <td>유입 채널 실험<br>+ 마케팅 아이디어 기획</td>
+                            <td>
+                                - 타깃 이메일 콘텐츠 초안<br>
+                                - 키워드 광고 구성안 정리<br>
+                                - CTA 흐름 정리<br>
+                                - SNS 아이디어 정리<br>
+                                - 스토리보드 작성<br>
+                                - 미팅 자료 준비
+                            </td>
+                            <td>
+                                - 이메일 내용<br>
+                                - CTA 흐름<br>
+                                - SNS 콘셉트 보드
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>4</strong></td>
+                            <td>전시 활용 정리<br>+ 결과 리뷰</td>
+                            <td>
+                                - 전시회 리스트업<br>
+                                - 고급형 제품 적용 포인트 정리<br>
+                                - 전체 아웃풋 요약<br>
+                                - 미팅 자료 준비
+                            </td>
+                            <td>
+                                - 전시회 리스트<br>
+                                - 고급형 적용안<br>
+                                - 요약 슬라이드
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
